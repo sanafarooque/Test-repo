@@ -1,10 +1,10 @@
 name: Send email
   # You may pin to the exact commit or the version.
   # uses: dawidd6/action-send-mail@6d98ae34d733f9a723a9e04e94f2f24ba05e1402
-  uses: dawidd6/action-send-mail@v6
-  with:
+uses: dawidd6/action-send-mail@v6
+with:
     # Connection URL protocol://user:password@server:port, protocol can be smtp or smtp+starttls, replaces server_address, server_port, secure, username and password
-    connection_url: # optional
+connection_url: # optional
     # SMTP server address
     server_address: # optional
     # SMTP server port
