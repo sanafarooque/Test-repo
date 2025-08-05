@@ -12,11 +12,11 @@ jobs:
         if: github.event.pull_request.merged == true
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.office365.com
-          server_port: 587
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Branch Merge Notification for Test-repo"
-          to: sana.farooque@hpe.com
-          from: no-reply@hpe.com
+          to: sanafarooque2604@gmail.com
+          from: sanafarooque26@gmail.com
           body: "Branch '${{ github.event.pull_request.head.ref }}' was merged into '${{ github.event.pull_request.base.ref }}' by ${{ github.actor }}"
