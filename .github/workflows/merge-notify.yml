@@ -12,10 +12,10 @@ jobs:
         if: github.event.pull_request.merged == true
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.example.com
+          server_address: mail.hpe.com
           server_port: 587
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
+          username: ${{ SMTP_SANAFAROOQUE }}
+          password: ${{ no-reply@hpe.com }}
           subject: "Branch Merge Notification"
           to: sana.farooque@hpe.com
           from: no-reply@hpe.com
