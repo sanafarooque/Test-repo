@@ -1,16 +1,13 @@
 name: Notify on merge
 
 on:
-  push:
-    branches:
-      - main
-      - master
-      - '**'
+  pull_request:
+    types: [closed]
 
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
       - name: Send Notification
-        if: github.event.head_commit.message != ''
-        run: echo "Merge occurred on branch ${{ github.ref }} by ${{ github.actor }}"
+        if: github.event.pull_request.merged == true
+        run: echo "Branch '${{ github.event.pull_request.head.ref }}' was merged into '${{ github.event.pull_request.base.ref }}' by ${{ github.actor }}"
