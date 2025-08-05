@@ -1,4 +1,4 @@
-name: Notify on merge
+name: Send Email Notification
 
 on:
   pull_request:
@@ -8,6 +8,15 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Notification
+      - name: Send Email Notification
         if: github.event.pull_request.merged == true
-        run: echo "Branch '${{ github.event.pull_request.head.ref }}' was merged into '${{ github.event.pull_request.base.ref }}' by ${{ github.actor }}"
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.example.com
+          server_port: 587
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "Branch Merge Notification"
+          to: sana.farooque@hpe.com
+          from: no-reply@hpe.com
+          body: "Branch '${{ github.event.pull_request.head.ref }}' was merged into '${{ github.event.pull_request.base.ref }}' by ${{ github.actor }}"
