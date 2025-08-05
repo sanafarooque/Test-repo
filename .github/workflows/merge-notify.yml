@@ -14,8 +14,8 @@ jobs:
         with:
           server_address: mail.hpe.com
           server_port: 587
-          username: ${{ SMTP_SANAFAROOQUE }}
-          password: ${{ no-reply@hpe.com }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
           subject: "Branch Merge Notification"
           to: sana.farooque@hpe.com
           from: no-reply@hpe.com
