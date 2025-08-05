@@ -16,7 +16,7 @@ jobs:
           server_port: 587
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "Branch Merge Notification"
+          subject: "Branch Merge Notification for Test-repo"
           to: sana.farooque@hpe.com
           from: no-reply@hpe.com
           body: "Branch '${{ github.event.pull_request.head.ref }}' was merged into '${{ github.event.pull_request.base.ref }}' by ${{ github.actor }}"
