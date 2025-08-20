@@ -1,0 +1,23 @@
+name: Notify Teams on PR Merge
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  notify:
+    if: ${{ github.event.pull_request.merged == true }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send PR merge details to Power Automate Flow
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{
+                "number": "${{ github.event.pull_request.number }}",
+                "title": "${{ github.event.pull_request.title }}",
+                "merged_by": "${{ github.actor }}",
+                "repo": "${{ github.repository }}",
+                "url": "${{ github.event.pull_request.html_url }}"
+              }' \
+          ${{ secrets.https://prod-136.westus.logic.azure.com:443/workflows/8178dbaf0aaa474eb14f429547fd4ed4/trigger[…]1.0&sig=Jv_-rScFuMd_rPDsCVE4-4fdbc1_zlLCCSrDInMQEWg }}
