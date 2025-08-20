@@ -20,4 +20,4 @@ jobs:
                 "repo": "${{ github.repository }}",
                 "url": "${{ github.event.pull_request.html_url }}"
               }' \
-          ${{ secrets.https://prod-136.westus.logic.azure.com:443/workflows/8178dbaf0aaa474eb14f429547fd4ed4/trigger[…]1.0&sig=Jv_-rScFuMd_rPDsCVE4-4fdbc1_zlLCCSrDInMQEWg }}
+          ${{ secrets.TEAMS_FLOW_URL }}
