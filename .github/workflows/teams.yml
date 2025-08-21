@@ -2,22 +2,23 @@ name: Notify Teams on PR Merge
 
 on:
   pull_request:
-    types: [closed]
+    types:
+      - closed   # Triggers when PR is closed (merged OR just closed)
 
 jobs:
   notify:
-    if: ${{ github.event.pull_request.merged == true }}
+    if: github.event.pull_request.merged == true   # Only if actually merged
     runs-on: ubuntu-latest
-
     steps:
-      - name: Send PR merge details to Power Automate Flow
-        run: |
-          curl -H "Content-Type: application/json" \
-          -d '{
-                "number": "${{ github.event.pull_request.number }}",
-                "title": "${{ github.event.pull_request.title }}",
-                "merged_by": "${{ github.actor }}",
-                "repo": "${{ github.repository }}",
-                "url": "${{ github.event.pull_request.html_url }}"
-              }' \
-          ${{ secrets.TEAMS_FLOW_URL }}
+      - name: Send MS Teams notification
+        uses: neonidian/teams-notify-build-status@v4
+        with:
+          webhookUrl: ${{ secrets.MS_TEAMS_WEBHOOK }}
+          message: |
+            ✅ Pull Request Merged
+            • Repo: ${{ github.repository }}
+            • PR: #${{ github.event.pull_request.number }} - ${{ github.event.pull_request.title }}
+            • Author: ${{ github.event.pull_request.user.login }}
+            • Merged by: ${{ github.event.pull_request.merged_by.login }}
+            • Branch: ${{ github.event.pull_request.head.ref }} → ${{ github.event.pull_request.base.ref }}
+
