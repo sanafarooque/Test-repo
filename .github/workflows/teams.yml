@@ -3,7 +3,7 @@ name: Notify Teams on PR Merge
 on:
   pull_request:
     types:
-      - closed   # Triggers when PR is closed (merged OR just closed)
+      - closed
 
 jobs:
   notify:
