@@ -11,32 +11,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send MS Teams notification
-        uses: skitionek/notify-microsoft-teams@v1
+        uses: neonidian/teams-notify-build-status@v4
         with:
           webhook_url: ${{ secrets.MS_TEAMS_WEBHOOK }}
-          # message: |
-          #   **✅ Pull Request Merged**
-          #   **Repo:** ${{ github.repository }}
-          #   **PR:** [#${{ github.event.pull_request.number }}](${{ github.event.pull_request.html_url }}) - ${{ github.event.pull_request.title }} 
-          #   **Author:** ${{ github.event.pull_request.user.login }}
-          #   **Merged by:** ${{ github.event.pull_request.merged_by.login }}
-          raw: |
-            {
-              "@type": "MessageCard",
-              "@context": "http://schema.org/extensions",
-              "themeColor": "#cfe2f3",
-              "summary": "Pull Request Merged",
-              "sections": [{
-                "activityTitle": "✅ Pull Request Merged",
-                "activitySubtitle": "#${{ github.event.pull_request.number }} - ${{ github.event.pull_request.title }}",
-                "activityImage": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-                "facts": [
-                  { "name": "Repository", "value": "${{ github.repository }}" },
-                  { "name": "Merged by", "value": "${{ github.event.pull_request.merged_by.login }}" },
-                  { "name": "Branch", "value": "${{ github.event.pull_request.head.ref }} → ${{ github.event.pull_request.base.ref }}" }
-                ],
-                "markdown": true
-              }]
-            }
+          title: "✅ Pull Request Merged"
+          titleBackgroundColor: "0076D7"
+          status: "SUCCESS"
+          message: |
+             **Repository:** ${{ github.repository }}
+             **PR:** [#${{ github.event.pull_request.number }}](${{ github.event.pull_request.html_url }}) - ${{ github.event.pull_request.title }}
+             **Author:** ${{ github.event.pull_request.user.login }}
+             **Merged by:** ${{ github.event.pull_request.merged_by.login }}
+#          raw: |
+#            {
+#              "@type": "MessageCard",
+#              "@context": "http://schema.org/extensions",
+#              "themeColor": "#cfe2f3",
+#              "summary": "Pull Request Merged",
+#              "sections": [{
+#                "activityTitle": "✅ Pull Request Merged",
+#                "activitySubtitle": "#${{ github.event.pull_request.number }} - ${{ github.event.pull_request.title }}",
+#                "activityImage": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+#                "facts": [
+#                  { "name": "Repository", "value": "${{ github.repository }}" },
+#                  { "name": "Merged by", "value": "${{ github.event.pull_request.merged_by.login }}" },
+#                  { "name": "Branch", "value": "${{ github.event.pull_request.head.ref }} → ${{ github.event.pull_request.base.ref }}" }
+#                ],
+#                "markdown": true
+#              }]
+#            }
             
 
