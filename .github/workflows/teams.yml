@@ -1,0 +1,24 @@
+name: Notify Teams on PR Merge
+
+on:
+  pull_request:
+    types:
+      - closed   # Triggers when PR is closed (merged OR just closed)
+
+jobs:
+  notify:
+    if: github.event.pull_request.merged == true   # Only if actually merged
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send MS Teams notification
+        uses: neonidian/teams-notify-build-status@v4
+        with:
+          webhookUrl: ${{ secrets.MS_TEAMS_WEBHOOK }}
+          message: |
+            ✅ Pull Request Merged
+            • Repo: ${{ github.repository }}
+            • PR: #${{ github.event.pull_request.number }} - ${{ github.event.pull_request.title }}
+            • Author: ${{ github.event.pull_request.user.login }}
+            • Merged by: ${{ github.event.pull_request.merged_by.login }}
+            • Branch: ${{ github.event.pull_request.head.ref }} → ${{ github.event.pull_request.base.ref }}
+
