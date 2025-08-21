@@ -13,7 +13,7 @@ jobs:
       - name: Send MS Teams notification
         uses: skitionek/notify-microsoft-teams@v1
         with:
-          webhookUrl: ${{ secrets.MS_TEAMS_WEBHOOK }}
+          webhook_url: ${{ secrets.MS_TEAMS_WEBHOOK }}
           # message: |
           #   **✅ Pull Request Merged**
           #   **Repo:** ${{ github.repository }}
