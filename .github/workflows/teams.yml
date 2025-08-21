@@ -13,7 +13,7 @@ jobs:
       - name: Send MS Teams notification
         uses: neonidian/teams-notify-build-status@v4
         with:
-          webhook_url: ${{ secrets.MS_TEAMS_WEBHOOK }}
+          webhookUrl: ${{ secrets.MS_TEAMS_WEBHOOK }}
           title: "✅ Pull Request Merged"
           titleBackgroundColor: "0076D7"
           status: "SUCCESS"
