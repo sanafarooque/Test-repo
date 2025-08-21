@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send MS Teams notification
-        uses: neonidian/teams-notify-build-status@v4
+        uses: skitionek/notify-microsoft-teams@v1
         with:
           webhookUrl: ${{ secrets.MS_TEAMS_WEBHOOK }}
           # message: |
@@ -36,13 +36,6 @@ jobs:
                   { "name": "Branch", "value": "${{ github.event.pull_request.head.ref }} → ${{ github.event.pull_request.base.ref }}" }
                 ],
                 "markdown": true
-              }],
-              "potentialAction": [{
-                "@type": "OpenUri",
-                "name": "View Pull Request",
-                "targets": [
-                  { "os": "default", "uri": "${{ github.event.pull_request.html_url }}" }
-                ]
               }]
             }
             
