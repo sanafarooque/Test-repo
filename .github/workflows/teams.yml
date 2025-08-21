@@ -15,7 +15,7 @@ jobs:
         with:
           webhookUrl: ${{ secrets.MS_TEAMS_WEBHOOK }}
           title: "✅ Pull Request Merged"
-          titleBackgroundColor: "0076D7"
+          titleBackgroundColor: "green"
           status: "SUCCESS"
           message: |
              **Repository:** ${{ github.repository }}
