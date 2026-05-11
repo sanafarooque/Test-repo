@@ -1,0 +1,11 @@
+resource "compute-type-layout" "73424300-708a-4d14-af27-961069565012" {
+  code = "73424300-708a-4d14-af27-961069565012"
+  name = "mk"
+  computeVersion = "ppppp"
+  dateCreated = "2026-02-10T19:23:35.000Z"
+  groupType = { code = "aks-cluster" }
+  lastUpdated = "2026-02-10T19:31:51.000Z"
+  memoryRequirement = 0
+  provisionType = { code = "aks" }
+  taskSets = [ { name = "test-workflow-basic" } ]
+}
