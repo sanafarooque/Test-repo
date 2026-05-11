@@ -1,0 +1,5 @@
+resource "task-set-task" "26f344db-3553-443d-9e5c-668f2cb6bd84" {
+  uuid = "26f344db-3553-443d-9e5c-668f2cb6bd84"
+  task = { name = "Conditional Workflow 1" }
+  taskPhase = "configure"
+}
