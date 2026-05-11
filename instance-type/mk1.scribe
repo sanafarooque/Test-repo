@@ -1,0 +1,9 @@
+resource "instance-type" "mk1" {
+  code = "mk1"
+  name = "mk test instance type"
+  uuid = "7f8cc349-dfe6-4ac6-a6e0-4fbf6bb97d86"
+  category = "web"
+  deploymentService = ""
+  environmentPrefix = "MK_TEST_INSTANCE_TYPE"
+  labels = [ "mk" ]
+}
