@@ -1,0 +1,17 @@
+resource "option-type" "containerType.azure.marketplaceSku" {
+  code = "containerType.azure.marketplaceSku"
+  name = "marketplaceSku"
+  uuid = "391d03a8-d671-48e1-b844-d8e1be45b4b5"
+  category = "containerType.azure"
+  dependsOn = "containerType.azure.marketplace"
+  displayOrder = 5
+  fieldCode = "gomorpheus.optiontype.SkuVersion"
+  fieldLabel = "SKU & VERSION"
+  fieldName = "azureMarketplaceSku"
+  global = false
+  optionSource = "azureMarketplaceSku"
+  optionSourceType = "com.hpe.morpheus.azure.dataset.provision"
+  required = true
+  type = "select"
+  visibleOnCode = "config.templateTypeSelect:marketplace"
+}
