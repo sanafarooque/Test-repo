@@ -1,0 +1,16 @@
+resource "task" "hello world" {
+  name = "hello world"
+  uuid = "e7aba30d-570d-402a-8b6e-123bca3d72ef"
+  dateCreated = "2026-05-04T20:21:36.000Z"
+  executeTarget = "resource"
+  labels = [ "sf" ]
+  lastUpdated = "2026-05-04T20:21:36.000Z"
+  options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
+    {
+      content = { uuid = "4019aab4-db96-4161-b169-c40b52920a3b" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

@@ -1,0 +1,5 @@
+resource "task-set-task" "813969dc-8906-40f1-a195-825afdacd7dd" {
+  uuid = "813969dc-8906-40f1-a195-825afdacd7dd"
+  task = { name = "hello world" }
+  taskPhase = "configure"
+}
