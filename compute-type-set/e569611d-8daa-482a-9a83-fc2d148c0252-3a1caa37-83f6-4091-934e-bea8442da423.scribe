@@ -1,0 +1,12 @@
+resource "compute-type-set" "e569611d-8daa-482a-9a83-fc2d148c0252-3a1caa37-83f6-4091-934e-bea8442da423" {
+  code = "e569611d-8daa-482a-9a83-fc2d148c0252-3a1caa37-83f6-4091-934e-bea8442da423"
+  name = "custom-upcloud-cluster-worker-3a1caa37-83f6-4091-934e-bea8442da423-set"
+  canAddNodes = true
+  computeServerType = { code = "upcloudLinux" }
+  dynamicCount = true
+  installContainerRuntime = true
+  nameSuffix = "-worker"
+  nodeType = "worker"
+  priorityOrder = 1
+  workloadType = { code = "3a1caa37-83f6-4091-934e-bea8442da423" }
+}

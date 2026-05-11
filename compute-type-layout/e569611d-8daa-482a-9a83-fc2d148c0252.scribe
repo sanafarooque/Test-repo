@@ -1,0 +1,16 @@
+resource "compute-type-layout" "e569611d-8daa-482a-9a83-fc2d148c0252" {
+  code = "e569611d-8daa-482a-9a83-fc2d148c0252"
+  name = "custom-upcloud-cluster"
+  computeServers = [
+    {
+      code = "e569611d-8daa-482a-9a83-fc2d148c0252-3a1caa37-83f6-4091-934e-bea8442da423"
+    }
+  ]
+  computeVersion = "1.0"
+  dateCreated = "2026-03-24T16:15:37.000Z"
+  groupType = { code = "docker-cluster" }
+  lastUpdated = "2026-03-24T16:20:38.000Z"
+  memoryRequirement = 0
+  provisionType = { code = "upcloud" }
+  type = { code = "upcloudLinux" }
+}

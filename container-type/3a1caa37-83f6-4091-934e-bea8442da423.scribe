@@ -1,0 +1,13 @@
+resource "container-type" "3a1caa37-83f6-4091-934e-bea8442da423" {
+  code = "3a1caa37-83f6-4091-934e-bea8442da423"
+  name = "custom-upcloud-node"
+  uuid = "13d03e25-b975-4a85-acba-ab552ccfaadf"
+  containerVersion = "1.0"
+  entryPoint = ""
+  provisionType = { code = "upcloud" }
+  repositoryImage = ""
+  shortName = "upcloud-node"
+  virtualImage = {
+    code = "upcloud.image.public.template.01000000-0000-4000-8000-000030240200"
+  }
+}
