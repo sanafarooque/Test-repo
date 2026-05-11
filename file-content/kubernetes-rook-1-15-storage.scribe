@@ -1,0 +1,41 @@
+resource "file-content" "kubernetes-rook-1-15-storage" {
+  code = "kubernetes-rook-1-15-storage"
+  uuid = "cb000832-108c-4a22-87c8-48c4f34fa102"
+  content = <<EOFSCRIBE
+apiVersion: ceph.rook.io/v1
+kind: CephBlockPool
+metadata:
+  name: replicapool
+  namespace: rook-ceph
+spec:
+  failureDomain: host
+  replicated:
+    size: 3
+    requireSafeReplicaSize: true
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: rook-ceph-block
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+provisioner: rook-ceph.rbd.csi.ceph.com
+parameters:
+  clusterID: rook-ceph
+  pool: replicapool
+  imageFormat: "2"
+  imageFeatures: layering
+  csi.storage.k8s.io/fstype: ext4
+  csi.storage.k8s.io/provisioner-secret-name: rook-csi-rbd-provisioner
+  csi.storage.k8s.io/provisioner-secret-namespace: rook-ceph
+  csi.storage.k8s.io/controller-expand-secret-name: rook-csi-rbd-provisioner
+  csi.storage.k8s.io/controller-expand-secret-namespace: rook-ceph
+  csi.storage.k8s.io/node-stage-secret-name: rook-csi-rbd-node
+  csi.storage.k8s.io/node-stage-secret-namespace: rook-ceph
+reclaimPolicy: Delete
+allowVolumeExpansion: true
+volumeBindingMode: Immediate
+EOFSCRIBE
+  dateCreated = "2025-11-12T21:45:51.000Z"
+  lastUpdated = "2025-11-12T21:45:51.000Z"
+}
