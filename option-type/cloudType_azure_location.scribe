@@ -1,0 +1,14 @@
+resource "option-type" "cloudType.azure.location" {
+  code = "cloudType.azure.location"
+  name = "Region"
+  uuid = "cdd34409-24ed-4811-a7ac-83c37e8e0c9f"
+  displayOrder = 6
+  fieldCode = "gomorpheus.label.region"
+  fieldContext = "zone"
+  fieldLabel = "Region"
+  fieldName = "regionCode"
+  optionSource = "azureLocation"
+  optionSourceType = "com.hpe.morpheus.azure.dataset"
+  required = true
+  type = "select"
+}
