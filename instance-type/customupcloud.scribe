@@ -1,0 +1,9 @@
+resource "instance-type" "customupcloud" {
+  code = "customupcloud"
+  name = "custom-upcloud-instance-type"
+  uuid = "39fc6dbf-1a28-4e44-97b8-36f7fe7ea789"
+  category = "web"
+  deploymentService = ""
+  description = "custom upcloud instance"
+  environmentPrefix = "CUSTOM-INSTANCE-TYPE"
+}

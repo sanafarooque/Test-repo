@@ -1,0 +1,17 @@
+resource "container-type" "upcloud.layout.public.template.ubuntu" {
+  code = "upcloud.layout.public.template.ubuntu"
+  name = "UpCloud Ubuntu 22.04"
+  uuid = "d832bed1-2e99-4297-b819-9715e3a545a2"
+  category = "ubuntu"
+  checkTypeCode = "vmCheck"
+  commEnabled = true
+  commPort = 22
+  commType = "SSH"
+  containerVersion = "22.04"
+  entryPoint = "/bin/bash"
+  logTypeCode = "ubuntu"
+  provisionType = { code = "upcloud" }
+  repositoryImage = "image"
+  shortName = "ubuntu"
+  statTypeCode = "vm"
+}
