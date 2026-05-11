@@ -1,0 +1,9 @@
+resource "instance-type" "esxi-nginx-instance-type" {
+  code = "esxi-nginx-instance-type"
+  name = "ESXI NGINX Instance Type"
+  uuid = "b783eb27-0d20-4710-b553-c4a2d4fe1662"
+  category = "web"
+  deploymentService = ""
+  environmentPrefix = "NGINX_INSTANCE_TYPE"
+  optionTypes = [ { code = "ngnix_app_version" } ]
+}

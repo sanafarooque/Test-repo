@@ -1,0 +1,14 @@
+resource "option-type-list" "NGNIX App Name" {
+  name = "NGNIX App Name"
+  uuid = "9164a1ea-db38-45c7-86ba-1b7e24a327eb"
+  initialDataset = <<EOFSCRIBE
+[
+  {
+  "name": "NGINX 1.0",
+  "value": "nginx-1.0"
+
+ }
+]
+EOFSCRIBE
+  type = "manual"
+}
