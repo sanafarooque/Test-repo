@@ -1,0 +1,16 @@
+resource "task" "python script to get instance data" {
+  name = "python script to get instance data"
+  uuid = "fe4f0e5e-d4f2-4aa2-8971-c1d90c55df03"
+  dateCreated = "2026-05-06T20:38:15.000Z"
+  executeTarget = "local"
+  labels = [ "sf" ]
+  lastUpdated = "2026-05-06T20:38:15.000Z"
+  options = [
+    {
+      content = { uuid = "a0f1d3dd-ea60-4d7e-9cab-e16e802e7e62" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  resultType = "value"
+  taskType = { code = "jythonTask" }
+}
