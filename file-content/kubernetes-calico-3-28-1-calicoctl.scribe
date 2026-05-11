@@ -1,0 +1,124 @@
+resource "file-content" "kubernetes-calico-3-28-1-calicoctl" {
+  code = "kubernetes-calico-3-28-1-calicoctl"
+  uuid = "45dd1853-c559-47dc-b864-9c7295ad8ba5"
+  content = <<EOFSCRIBE
+# Calico Version master
+# https://projectcalico.docs.tigera.io/releases#master
+# This manifest includes the following component versions:
+#   calico/ctl:master
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: calicoctl
+  namespace: kube-system
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: calicoctl
+  namespace: kube-system
+spec:
+  imagePullSecrets:
+    - name: default-docker-secret
+  nodeSelector:
+    kubernetes.io/os: linux
+  hostNetwork: true
+  serviceAccountName: calicoctl
+  containers:
+  - name: calicoctl
+    image: "<%=cluster.imageServer ? 'k8registry.internal:5000/calico/ctl:v3.29.0' : 'calico/ctl:v3.29.0' %>"
+    command:
+      - calicoctl
+    args:
+      - version
+      - --poll=1m
+    env:
+    - name: DATASTORE_TYPE
+      value: kubernetes
+
+---
+
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: calicoctl
+rules:
+  - apiGroups: [""]
+    resources:
+      - namespaces
+      - nodes
+    verbs:
+      - get
+      - list
+      - update
+  - apiGroups: [""]
+    resources:
+      - nodes/status
+    verbs:
+      - update
+  - apiGroups: [""]
+    resources:
+      - pods
+      - serviceaccounts
+    verbs:
+      - get
+      - list
+  - apiGroups: [""]
+    resources:
+      - pods/status
+    verbs:
+      - update
+  - apiGroups: ["crd.projectcalico.org"]
+    resources:
+      - bgppeers
+      - bgpconfigurations
+      - clusterinformations
+      - felixconfigurations
+      - globalnetworkpolicies
+      - globalnetworksets
+      - ippools
+      - ipreservations
+      - kubecontrollersconfigurations
+      - networkpolicies
+      - networksets
+      - hostendpoints
+      - ipamblocks
+      - blockaffinities
+      - ipamhandles
+      - ipamconfigs
+    verbs:
+      - create
+      - get
+      - list
+      - update
+      - delete
+  - apiGroups: ["networking.k8s.io"]
+    resources:
+      - networkpolicies
+    verbs:
+      - get
+      - list
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: calicoctl
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: calicoctl
+subjects:
+- kind: ServiceAccount
+  name: calicoctl
+  namespace: kube-system
+
+
+EOFSCRIBE
+  dateCreated = "2025-11-12T21:45:50.000Z"
+  lastUpdated = "2025-11-12T21:45:50.000Z"
+}
