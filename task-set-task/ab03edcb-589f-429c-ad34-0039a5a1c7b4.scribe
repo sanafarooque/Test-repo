@@ -1,0 +1,5 @@
+resource "task-set-task" "ab03edcb-589f-429c-ad34-0039a5a1c7b4" {
+  uuid = "ab03edcb-589f-429c-ad34-0039a5a1c7b4"
+  task = { name = "Setup Additional Ubuntu Disk" }
+  taskPhase = "provision"
+}
