@@ -1,0 +1,25 @@
+resource "option-type-form" "{  "name": "MyTest-${sequence.toString().padLeft(4,'0')}" }" {
+  code = "{  \"name\": \"MyTest-$${sequence.toString().padLeft(4,'0')}\" }"
+  name = "testforinvalid options"
+  uuid = "638fd107-c41b-45c7-9aa0-3f98c66e2967"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  options = [
+    {
+      code = "mk"
+      name = "test the invalid options"
+      uuid = "a2343301-b792-42ca-8824-153be9964dea"
+      fieldContext = "config.customOptions"
+      fieldLabel = "mk"
+      fieldName = "mk"
+      optionList = { name = "test for mk" }
+      optionSource = "list"
+      type = "select"
+    }
+  ]
+}
