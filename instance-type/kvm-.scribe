@@ -1,0 +1,9 @@
+resource "instance-type" "kvm\" {
+  code = "kvm\\"
+  name = "mk test instance type"
+  uuid = "a24b2361-08ef-43bb-923a-6952aeea4cff"
+  category = "web"
+  deploymentService = ""
+  environmentPrefix = "MK_TEST_INSTANCE_TYPE"
+  labels = [ "bk" ]
+}

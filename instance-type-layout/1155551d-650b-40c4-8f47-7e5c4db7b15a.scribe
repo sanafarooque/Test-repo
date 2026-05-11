@@ -1,0 +1,10 @@
+resource "instance-type-layout" "1155551d-650b-40c4-8f47-7e5c4db7b15a" {
+  code = "1155551d-650b-40c4-8f47-7e5c4db7b15a"
+  name = "test mk layout"
+  uuid = "87383e53-e7e1-48d4-85b4-5873cf5ed5eb"
+  instanceType = { code = "kvm\\" }
+  instanceVersion = "24.04"
+  memoryRequirement = 0
+  optionTypes = [ { code = "mk" } ]
+  provisionType = { code = "docker" }
+}

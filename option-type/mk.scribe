@@ -1,0 +1,11 @@
+resource "option-type" "mk" {
+  code = "mk"
+  name = "test the invalid options"
+  uuid = "a2343301-b792-42ca-8824-153be9964dea"
+  fieldContext = "config.customOptions"
+  fieldLabel = "mk"
+  fieldName = "mk"
+  optionList = { name = "test for mk" }
+  optionSource = "list"
+  type = "select"
+}
