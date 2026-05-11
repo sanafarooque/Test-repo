@@ -1,0 +1,13 @@
+resource "task-set" "test2" {
+  name = "test2"
+  uuid = "0c572fd4-ce03-4a76-a975-a7af89dede25"
+  dateCreated = "2026-05-06T19:40:46.000Z"
+  labels = [ "sf" ]
+  lastUpdated = "2026-05-06T19:40:51.000Z"
+  platform = "linux"
+  taskSetTasks = [
+    { uuid = "2f680ca9-e14c-46e4-b59b-da9697c14974" },
+    { uuid = "e4ea9590-5ac9-494f-a331-4eaac731850f" }
+  ]
+  taskSetType = "operation"
+}
