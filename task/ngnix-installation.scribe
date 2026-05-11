@@ -1,0 +1,16 @@
+resource "task" "ngnix-installation" {
+  name = "ngnix-installation"
+  uuid = "06981a46-8c47-45f5-ae8b-9f9ad512bc44"
+  dateCreated = "2025-11-20T21:40:57.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2025-11-20T22:00:33.000Z"
+  options = [
+    {
+      content = { uuid = "0fb0c363-6989-4af8-bed8-bc7f8ee4b6a2" }
+      optionType = { code = "script" }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
+  ]
+  retryable = true
+  taskType = { code = "script" }
+}
