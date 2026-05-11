@@ -1,0 +1,35 @@
+resource "file-content" "dac5fa0c-67a6-41c5-ba45-701e80866edd" {
+  uuid = "dac5fa0c-67a6-41c5-ba45-701e80866edd"
+  content = <<EOFSCRIBE
+import sys
+import subprocess
+
+
+def get_python_info() -> dict[str, str]:
+    """Get the current Python executable path and version."""
+    return {
+        "executable": sys.executable,
+        "version": sys.version,
+        "version_info": f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}",
+    }
+
+
+def get_python_from_shell() -> str:
+    """Get the Python path resolved by the shell."""
+    result = subprocess.run(["which", "python3"], capture_output=True, text=True)
+    return result.stdout.strip()
+
+
+if __name__ == "__main__":
+    info = get_python_info()
+    shell_python = get_python_from_shell()
+
+    print(f"Executable : {info['executable']}")
+    print(f"Version    : {info['version_info']}")
+    print(f"Full Info  : {info['version']}")
+    print(f"Shell Path : {shell_python}")
+
+EOFSCRIBE
+  dateCreated = "2026-03-27T16:49:27.000Z"
+  lastUpdated = "2026-03-27T16:49:27.000Z"
+}

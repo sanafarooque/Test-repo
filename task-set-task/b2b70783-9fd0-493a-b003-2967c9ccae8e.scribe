@@ -1,0 +1,6 @@
+resource "task-set-task" "b2b70783-9fd0-493a-b003-2967c9ccae8e" {
+  uuid = "b2b70783-9fd0-493a-b003-2967c9ccae8e"
+  task = { code = "pythonVersion" }
+  taskOrder = 2
+  taskPhase = "operation"
+}

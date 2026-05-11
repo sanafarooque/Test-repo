@@ -1,0 +1,27 @@
+resource "file-content" "ab768462-0e8e-4536-84d1-4d8e8868fd10" {
+  uuid = "ab768462-0e8e-4536-84d1-4d8e8868fd10"
+  content = <<EOFSCRIBE
+import socket
+
+
+def get_local_ip() -> str:
+    """Return the local IPv4 address used for outbound traffic."""
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        # No packets are sent; this only asks the OS which interface it would use.
+        sock.connect(("8.8.8.8", 80))
+        return sock.getsockname()[0]
+    except OSError:
+        # Fallback for offline/restricted environments.
+        return socket.gethostbyname(socket.gethostname())
+    finally:
+        sock.close()
+
+
+if __name__ == "__main__":
+    print(get_local_ip())
+
+EOFSCRIBE
+  dateCreated = "2026-03-31T16:16:06.000Z"
+  lastUpdated = "2026-03-31T16:20:05.000Z"
+}

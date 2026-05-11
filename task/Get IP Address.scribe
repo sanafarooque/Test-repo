@@ -1,0 +1,15 @@
+resource "task" "Get IP Address" {
+  name = "Get IP Address"
+  uuid = "ef1ec635-6a5e-4538-8bc7-78487d0366cc"
+  dateCreated = "2026-03-31T16:16:06.000Z"
+  executeTarget = "local"
+  labels = [ "mbalunis" ]
+  lastUpdated = "2026-03-31T16:16:06.000Z"
+  options = [
+    {
+      content = { uuid = "ab768462-0e8e-4536-84d1-4d8e8868fd10" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  taskType = { code = "jythonTask" }
+}
