@@ -1,0 +1,10 @@
+resource "compute-type-set" "docker-nutanix-ubuntu-20.04-set" {
+  code = "docker-nutanix-ubuntu-20.04-set"
+  name = "docker host"
+  canAddNodes = true
+  dynamicCount = true
+  installContainerRuntime = true
+  installStorageRuntime = true
+  nodeType = "worker"
+  workloadType = { code = "docker-nutanix-ubuntu-20.04" }
+}
