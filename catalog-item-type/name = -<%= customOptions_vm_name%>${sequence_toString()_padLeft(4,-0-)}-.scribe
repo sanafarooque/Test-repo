@@ -1,0 +1,9 @@
+resource "catalog-item-type" "name = "<%= customOptions.vm_name%>${sequence.toString().padLeft(4,'0')}"" {
+  code = "name = \"<%= customOptions.vm_name%>$${sequence.toString().padLeft(4,'0')}\""
+  name = "mk test"
+  uuid = "5ecdc967-173c-4e07-a838-e216d35b726b"
+  config = { appSpec = "" }
+  dateCreated = "2026-02-10T19:29:45.000Z"
+  lastUpdated = "2026-02-10T19:29:45.000Z"
+  refType = "AppTemplate"
+}
