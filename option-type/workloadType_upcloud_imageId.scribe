@@ -1,0 +1,15 @@
+resource "option-type" "workloadType.upcloud.imageId" {
+  code = "workloadType.upcloud.imageId"
+  name = "imageType"
+  uuid = "556ee163-b249-4c37-a508-37de7957f0b9"
+  category = "workloadType.upcloud"
+  displayOrder = 3
+  fieldCode = "gomorpheus.optiontype.Image"
+  fieldGroup = "Options"
+  fieldLabel = "Image"
+  fieldName = "imageId"
+  global = false
+  optionSource = "upcloud.upcloudImageDataset"
+  optionSourceType = "upcloud"
+  type = "select"
+}
