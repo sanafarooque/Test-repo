@@ -1,0 +1,5 @@
+resource "task-set-task" "7319ddb6-2fb1-4a2d-9769-04b090d8ada2" {
+  uuid = "7319ddb6-2fb1-4a2d-9769-04b090d8ada2"
+  task = { name = "test bug mk 5618" }
+  taskPhase = "provision"
+}
