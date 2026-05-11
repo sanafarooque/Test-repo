@@ -1,0 +1,34 @@
+resource "task" "Conditional Workflow 1" {
+  name = "Conditional Workflow 1"
+  uuid = "2dc69597-885f-4e7b-8728-dedd2af8d9d5"
+  dateCreated = "2026-05-06T20:14:11.000Z"
+  executeTarget = "local"
+  lastUpdated = "2026-05-06T20:14:11.000Z"
+  options = [
+    {
+      optionType = { code = "ifOperationalWorkflowId" }
+      value = { name = "test2" }
+    },
+    {
+      optionType = { code = "elseOperationalWorkflowId" }
+      value = { name = "test3" }
+    },
+    {
+      optionType = { code = "elseOperationalWorkflowName" }
+      value = "New Workflow 4"
+    },
+    {
+      optionType = { code = "ifOperationalWorkflowName" }
+      value = "New Workflow 4"
+    },
+    {
+      optionType = { code = "conditionalScript" }
+      value = <<EOFSCRIBE
+if (a ==2) {
+  print (a)
+}
+EOFSCRIBE
+    }
+  ]
+  taskType = { code = "conditionalWorkflow" }
+}
