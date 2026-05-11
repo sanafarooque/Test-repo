@@ -1,0 +1,8 @@
+resource "instance-type" "kvm1" {
+  code = "kvm1"
+  name = "Morpheus Registry Server"
+  uuid = "8fc2dfe4-ebc4-4f6c-bcb2-300634be3402"
+  category = "os"
+  deploymentService = ""
+  environmentPrefix = "MORPHEUS_REGISTRY_SERVER"
+}
