@@ -1,0 +1,10 @@
+resource "compute-type-set" "kube-ubuntu-24-04-ha-worker-nutanix-amd64-set" {
+  code = "kube-ubuntu-24-04-ha-worker-nutanix-amd64-set"
+  name = "kubernetes master"
+  category = "ubuntu"
+  canAddNodes = true
+  nameSuffix = "-worker"
+  nodeType = "worker"
+  priorityOrder = 3
+  workloadType = { code = "kubernetes-ubuntu-24-04-1-worker-nutanix-amd64" }
+}
