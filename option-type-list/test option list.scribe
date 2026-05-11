@@ -1,0 +1,7 @@
+resource "option-type-list" "test option list" {
+  name = "test option list"
+  uuid = "1ad99efd-5cdb-4385-a75b-c140482955ef"
+  apiType = "clouds"
+  realTime = true
+  type = "api"
+}
