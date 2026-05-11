@@ -1,0 +1,5 @@
+resource "task-set-task" "8af8d8ac-8bc8-42c8-9496-0857f76a2e9d" {
+  uuid = "8af8d8ac-8bc8-42c8-9496-0857f76a2e9d"
+  task = { name = "Update default NGINX index page" }
+  taskPhase = "operation"
+}

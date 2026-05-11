@@ -1,0 +1,32 @@
+resource "file-content" "12e99578-2870-4a0b-9211-b2d4f3eb7bf7" {
+  uuid = "12e99578-2870-4a0b-9211-b2d4f3eb7bf7"
+  content = <<EOFSCRIBE
+#!/bin/bash
+
+echo "Creating custom index.html..."
+
+defaultText="Default index.html string"
+
+echo "default: $defaultText"
+
+newText="<%=customOptions.customContent%>"
+
+echo "provided: $newText"
+
+if [[ -n "${newText//[[:space:]]/}" ]]; then
+  echo "Provided input is OK"
+else
+  echo "No input provided, defaulting to $defaultText"
+  newText=$defaultText  
+fi
+
+echo "Using: $newText"
+
+echo "<html><body><h1>$newText</h1></body></html>" > /var/www/html/index.html
+
+echo "===== NGINX installation complete ====="
+
+EOFSCRIBE
+  dateCreated = "2026-03-24T17:00:30.000Z"
+  lastUpdated = "2026-03-26T20:58:19.000Z"
+}
