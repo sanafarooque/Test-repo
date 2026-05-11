@@ -5,4 +5,5 @@ resource "instance-type" "kvm1" {
   category = "os"
   deploymentService = ""
   environmentPrefix = "MORPHEUS_REGISTRY_SERVER"
+  layouts = [ { code = "ef1b2e71-2395-4e55-8bed-9ef47aa1246f" } ]
 }
