@@ -1,0 +1,5 @@
+resource "task-set-task" "7bde34c9-190c-4cfd-8260-8a5716333397" {
+  uuid = "7bde34c9-190c-4cfd-8260-8a5716333397"
+  task = { name = "Sleep-Task" }
+  taskOrder = 1
+}

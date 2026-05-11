@@ -1,0 +1,16 @@
+resource "task" "Update System Packages" {
+  name = "Update System Packages"
+  uuid = "e0eca4d6-7a49-47d9-a31d-fbbfc0ce6fd4"
+  dateCreated = "2026-03-23T21:45:27.000Z"
+  executeTarget = "resource"
+  labels = [ "mbalunis" ]
+  lastUpdated = "2026-03-26T19:31:43.000Z"
+  options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
+    {
+      content = { uuid = "c0297c58-fc7f-4266-a89b-690177c23a7c" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

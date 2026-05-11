@@ -1,0 +1,4 @@
+resource "task-set-task" "9fb4fa6b-8fc9-46d2-aa72-43617c9da24e" {
+  uuid = "9fb4fa6b-8fc9-46d2-aa72-43617c9da24e"
+  task = { name = "Update System Packages" }
+}

@@ -1,0 +1,18 @@
+resource "file-content" "c0297c58-fc7f-4266-a89b-690177c23a7c" {
+  uuid = "c0297c58-fc7f-4266-a89b-690177c23a7c"
+  content = <<EOFSCRIBE
+#!/bin/bash
+
+echo "Setting proxy..."
+export http_proxy="http://web-proxy.corp.hpecorp.net:8080"
+export https_proxy="http://web-proxy.corp.hpecorp.net:8080"
+
+
+# Update system packages
+echo "Updating package list..."
+apt-get update -y
+
+EOFSCRIBE
+  dateCreated = "2026-03-23T21:45:27.000Z"
+  lastUpdated = "2026-03-23T21:51:58.000Z"
+}
