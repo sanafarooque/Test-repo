@@ -1,0 +1,10 @@
+resource "file-content" "f0fb55f4-c0ef-4b0b-beef-849113ef0902" {
+  uuid = "f0fb55f4-c0ef-4b0b-beef-849113ef0902"
+  content = <<EOFSCRIBE
+GROUP_ID="<%=customOptions.groupID%>"
+WEBHOOK="https://welcome.cae/morpheus?groupID=${GROUP_ID}"
+echo $WEBHOOK
+EOFSCRIBE
+  dateCreated = "2026-02-05T21:31:05.000Z"
+  lastUpdated = "2026-03-03T22:57:16.000Z"
+}

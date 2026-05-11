@@ -1,0 +1,16 @@
+resource "task" "test bug mk 5618" {
+  name = "test bug mk 5618"
+  uuid = "b231f4b4-e559-4e18-afbc-bda04d1e85a6"
+  allowCustomConfig = true
+  dateCreated = "2026-02-05T21:31:05.000Z"
+  executeTarget = "resource"
+  lastUpdated = "2026-03-04T00:39:46.000Z"
+  options = [
+    {
+      content = { uuid = "f0fb55f4-c0ef-4b0b-beef-849113ef0902" }
+      optionType = { code = "script" }
+    }
+  ]
+  resultType = "value"
+  taskType = { code = "script" }
+}

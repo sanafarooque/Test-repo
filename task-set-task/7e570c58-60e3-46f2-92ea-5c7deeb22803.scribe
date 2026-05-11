@@ -1,0 +1,5 @@
+resource "task-set-task" "7e570c58-60e3-46f2-92ea-5c7deeb22803" {
+  uuid = "7e570c58-60e3-46f2-92ea-5c7deeb22803"
+  task = { name = "test-basic-shell" }
+  taskPhase = "provision"
+}
