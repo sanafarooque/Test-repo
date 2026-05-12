@@ -1,0 +1,15 @@
+resource "compute-type-layout" "docker-nutanix-ubuntu-20.04-single" {
+  code = "docker-nutanix-ubuntu-20.04-single"
+  name = "Nutanix Docker Ubuntu 20.04"
+  computeServers = [ { code = "docker-nutanix-ubuntu-20.04-set" } ]
+  computeVersion = "20.04"
+  dateCreated = "2025-11-24T17:27:42.000Z"
+  description = "This will provision a single docker host vm in nutanix central."
+  groupType = { code = "docker-cluster" }
+  hasAutoScale = true
+  lastUpdated = "2025-11-24T17:52:29.000Z"
+  memoryRequirement = 1073741824
+  provisionType = { code = "nutanix" }
+  sortOrder = 5
+  type = { code = "nutanixLinux" }
+}
