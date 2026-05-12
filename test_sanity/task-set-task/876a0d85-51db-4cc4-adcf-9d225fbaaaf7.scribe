@@ -1,0 +1,6 @@
+resource "task-set-task" "876a0d85-51db-4cc4-adcf-9d225fbaaaf7" {
+  uuid = "876a0d85-51db-4cc4-adcf-9d225fbaaaf7"
+  task = { name = "Get IP Address" }
+  taskOrder = 1
+  taskPhase = "operation"
+}

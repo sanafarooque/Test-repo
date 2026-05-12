@@ -1,0 +1,17 @@
+resource "task" "pythonVersion" {
+  code = "pythonVersion"
+  name = "Get Python version"
+  uuid = "d12cc263-2db5-429d-bb3a-5cad3b158edb"
+  dateCreated = "2026-03-27T16:49:27.000Z"
+  executeTarget = "local"
+  labels = [ "mbalunis" ]
+  lastUpdated = "2026-03-27T16:49:27.000Z"
+  options = [
+    {
+      content = { uuid = "dac5fa0c-67a6-41c5-ba45-701e80866edd" }
+      optionType = { code = "pythonScript" }
+    }
+  ]
+  resultType = "value"
+  taskType = { code = "jythonTask" }
+}
