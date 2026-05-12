@@ -1,0 +1,9 @@
+resource "compute-type-set" "kubernetes-ha-add-master-ubuntu-20-04-xen-amd64-set" {
+  code = "kubernetes-ha-add-master-ubuntu-20-04-xen-amd64-set"
+  name = "kubernetes master"
+  category = "ubuntu"
+  nameSuffix = "-master"
+  nodeType = "master"
+  priorityOrder = 1
+  workloadType = { code = "kubernetes-ha-add-master-ubuntu-20-04-xen-amd64" }
+}
