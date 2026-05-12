@@ -1,0 +1,13 @@
+resource "file-content" "c4298aa4-7e7f-42ba-a2f7-e7f6f2c04ad9" {
+  uuid = "c4298aa4-7e7f-42ba-a2f7-e7f6f2c04ad9"
+  content = <<EOFSCRIBE
+#!/bin/bash
+
+echo "Sleeping for 10 seconds..."
+
+sleep 10
+
+EOFSCRIBE
+  dateCreated = "2026-03-24T16:51:21.000Z"
+  lastUpdated = "2026-03-24T17:42:33.000Z"
+}

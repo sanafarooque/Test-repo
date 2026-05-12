@@ -1,0 +1,13 @@
+resource "task-set" "Update System & Install NGINX" {
+  name = "Update System & Install NGINX"
+  uuid = "5e6e0d47-1b52-4e35-8ed0-8b8dd65d56bd"
+  dateCreated = "2026-03-26T20:04:28.000Z"
+  labels = [ "mbalunis" ]
+  lastUpdated = "2026-03-26T20:04:28.000Z"
+  platform = "linux"
+  taskSetTasks = [
+    { uuid = "7bde34c9-190c-4cfd-8260-8a5716333397" },
+    { uuid = "9fb4fa6b-8fc9-46d2-aa72-43617c9da24e" },
+    { uuid = "a520a194-8fc3-44a1-83c1-a0e3e1746249" }
+  ]
+}

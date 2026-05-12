@@ -1,0 +1,23 @@
+resource "file-content" "41eb9d62-2add-4859-8fc4-8b45bbd4b517" {
+  uuid = "41eb9d62-2add-4859-8fc4-8b45bbd4b517"
+  content = <<EOFSCRIBE
+#!/bin/bash
+
+echo "Setting proxy..."
+export http_proxy="http://web-proxy.corp.hpecorp.net:8080"
+export https_proxy="http://web-proxy.corp.hpecorp.net:8080"
+
+
+# Install NGINX
+
+echo "Installing NGINX..."
+
+DEBIAN_FRONTEND=noninteractive apt-get install -y nginx
+
+# apt-get install -y nginx
+
+
+EOFSCRIBE
+  dateCreated = "2026-03-24T16:31:50.000Z"
+  lastUpdated = "2026-03-26T19:45:57.000Z"
+}

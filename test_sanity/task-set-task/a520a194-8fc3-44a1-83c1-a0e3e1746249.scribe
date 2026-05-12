@@ -1,0 +1,5 @@
+resource "task-set-task" "a520a194-8fc3-44a1-83c1-a0e3e1746249" {
+  uuid = "a520a194-8fc3-44a1-83c1-a0e3e1746249"
+  task = { name = "Install NGINX" }
+  taskOrder = 2
+}
