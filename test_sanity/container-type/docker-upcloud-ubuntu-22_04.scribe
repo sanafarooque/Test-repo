@@ -1,0 +1,20 @@
+resource "container-type" "docker-upcloud-ubuntu-22.04" {
+  code = "docker-upcloud-ubuntu-22.04"
+  name = "Docker Ubuntu 22.04"
+  uuid = "01b5e4f7-47ae-4cbc-9ca9-a2b3c937595a"
+  category = "ubuntu"
+  checkTypeCode = "vmCheck"
+  cloneType = "ubuntu"
+  containerPorts = [ { code = "ubuntu.22" } ]
+  containerVersion = "22.04"
+  imageCode = "morpheus ubuntu 22.04"
+  logTypeCode = "ubuntu"
+  mountLogs = "/var/log"
+  osType = { code = "ubuntu.22.04.64" }
+  providerType = "upcloud"
+  provisionType = { code = "upcloud" }
+  serverType = "vm"
+  shortName = "ubuntu"
+  showServerLogs = true
+  statTypeCode = "server"
+}
