@@ -1,0 +1,13 @@
+resource "task-set" "test operational 1" {
+  name = "test operational 1"
+  uuid = "1a9cba71-c5cd-4179-8827-2861249e768b"
+  dateCreated = "2026-05-06T20:38:15.000Z"
+  lastUpdated = "2026-05-06T20:39:29.000Z"
+  platform = "all"
+  taskSetTasks = [
+    { uuid = "769d32b6-5b07-4485-b6c9-96d6a97cfc25" },
+    { uuid = "a947a2a9-8277-4cce-bd47-8ab28e3f2e28" },
+    { uuid = "ec0c74a0-2f8f-4088-9001-d28682228af8" }
+  ]
+  taskSetType = "operation"
+}

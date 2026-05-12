@@ -1,0 +1,6 @@
+resource "task-set-task" "ec0c74a0-2f8f-4088-9001-d28682228af8" {
+  uuid = "ec0c74a0-2f8f-4088-9001-d28682228af8"
+  task = { name = "hello world" }
+  taskOrder = 1
+  taskPhase = "operation"
+}

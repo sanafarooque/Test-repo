@@ -1,0 +1,34 @@
+resource "file-content" "a0f1d3dd-ea60-4d7e-9cab-e16e802e7e62" {
+  uuid = "a0f1d3dd-ea60-4d7e-9cab-e16e802e7e62"
+  content = <<EOFSCRIBE
+import json
+
+# 1. Access Morpheus context variables
+# These are automatically available when run against an instance
+instance_name = morpheus['instance']['name']
+cloud_type = morpheus['cloud']['type']
+instance_ip = morpheus['server']['externalIp']
+
+print(f"--- Starting Task for Instance: {instance_name} ---")
+print(f"Cloud Environment: {cloud_type}")
+print(f"Target IP Address: {instance_ip}")
+
+# 2. Simple logic example
+if cloud_type == 'amazon':
+    print("Performing AWS-specific maintenance...")
+elif cloud_type == 'vmware':
+    print("Performing VMware-specific maintenance...")
+else:
+    print("Standard maintenance triggered.")
+
+# 3. Passing data to the NEXT task in a workflow
+# Use the 'results' dictionary to store output
+morpheus['results']['taskStatus'] = 'Complete'
+morpheus['results']['backupCode'] = 12345
+
+print("Task finished successfully.")
+
+EOFSCRIBE
+  dateCreated = "2026-05-06T20:38:15.000Z"
+  lastUpdated = "2026-05-06T20:38:15.000Z"
+}

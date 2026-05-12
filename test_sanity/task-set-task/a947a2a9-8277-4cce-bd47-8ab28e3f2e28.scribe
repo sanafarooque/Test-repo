@@ -1,0 +1,5 @@
+resource "task-set-task" "a947a2a9-8277-4cce-bd47-8ab28e3f2e28" {
+  uuid = "a947a2a9-8277-4cce-bd47-8ab28e3f2e28"
+  task = { name = "python script to get instance data" }
+  taskPhase = "operation"
+}
