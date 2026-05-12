@@ -1,0 +1,9 @@
+resource "option-type" "cloudType.azure.storageAccount" {
+  code = "cloudType.azure.storageAccount"
+  name = "Storage Account"
+  uuid = "852ac3b3-743b-4ae0-9864-0fe386150477"
+  displayOrder = 11
+  fieldCode = "gomorpheus.optiontype.StorageAccount"
+  fieldLabel = "Storage Account"
+  fieldName = "storageAccount"
+}
