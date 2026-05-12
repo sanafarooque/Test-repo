@@ -14,11 +14,11 @@ resource "task" "Conditional Workflow 1" {
       value = { name = "test3" }
     },
     {
-      optionType = { code = "ifOperationalWorkflowName" }
+      optionType = { code = "elseOperationalWorkflowName" }
       value = "New Workflow 4"
     },
     {
-      optionType = { code = "elseOperationalWorkflowName" }
+      optionType = { code = "ifOperationalWorkflowName" }
       value = "New Workflow 4"
     },
     {
