@@ -6,5 +6,4 @@ resource "instance-type" "customupcloud" {
   deploymentService = ""
   description = "custom upcloud instance"
   environmentPrefix = "CUSTOM-INSTANCE-TYPE"
-  layouts = [ { code = "419028b8-e9bb-4838-beb0-83f453cf845a" } ]
 }
