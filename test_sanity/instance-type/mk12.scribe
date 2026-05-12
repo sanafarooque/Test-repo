@@ -1,0 +1,9 @@
+resource "instance-type" "mk12" {
+  code = "mk12"
+  name = "invalid test"
+  uuid = "bab4c8d3-87c8-4851-b422-bf89e84ad94f"
+  category = "cloud"
+  deploymentService = ""
+  environmentPrefix = "INVALID_TEST"
+  optionTypes = [ { code = "mk" } ]
+}
