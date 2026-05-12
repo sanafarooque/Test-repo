@@ -1,0 +1,13 @@
+resource "file-content" "0f9b2cdb-1863-47a0-85df-e04b2e75e506" {
+  uuid = "0f9b2cdb-1863-47a0-85df-e04b2e75e506"
+  content = <<EOFSCRIBE
+#!/bin/bash
+
+echo "Hello World Again!!"
+
+
+
+EOFSCRIBE
+  dateCreated = "2026-05-04T20:24:01.000Z"
+  lastUpdated = "2026-05-04T20:24:01.000Z"
+}
