@@ -7,11 +7,11 @@ resource "task" "Setup Additional Ubuntu Disk" {
   labels = [ "sf" ]
   lastUpdated = "2026-05-05T15:51:46.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "9b4b8a9c-0605-4320-a586-5a8c55bf95ba" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
 }
