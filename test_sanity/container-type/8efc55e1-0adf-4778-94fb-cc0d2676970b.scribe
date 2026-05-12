@@ -1,0 +1,15 @@
+resource "container-type" "8efc55e1-0adf-4778-94fb-cc0d2676970b" {
+  code = "8efc55e1-0adf-4778-94fb-cc0d2676970b"
+  name = "new-esxi-node-type-33e4e"
+  uuid = "f4f878cf-cef2-4ff8-8c69-85c67eb2f35e"
+  containerVersion = "1.0"
+  entryPoint = ""
+  logTypeCode = "vm"
+  provisionType = { code = "esxi" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "new-esxi-node-type-33e4e"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.ubuntu.24.04.20250218.amd64" }
+}
