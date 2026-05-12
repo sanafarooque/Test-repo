@@ -6,5 +6,4 @@ resource "instance-type" "kvm\" {
   deploymentService = ""
   environmentPrefix = "MK_TEST_INSTANCE_TYPE"
   labels = [ "bk" ]
-  layouts = [ { code = "1155551d-650b-40c4-8f47-7e5c4db7b15a" } ]
 }
