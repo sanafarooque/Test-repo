@@ -1,0 +1,17 @@
+resource "option-type" "networkServerType.azure.securityGroup.resourceGroup" {
+  code = "networkServerType.azure.securityGroup.resourceGroup"
+  name = "resourceGroup"
+  uuid = "f8bcb489-956f-4fd6-822d-461b15dd200b"
+  category = "securityGroup.azure"
+  displayOrder = 3
+  editable = true
+  fieldCode = "gomorpheus.label.azure.resource.group"
+  fieldContext = "customOptions"
+  fieldLabel = "Resource Group"
+  fieldName = "resourceGroup"
+  global = false
+  optionSource = "azureZonePools"
+  optionSourceType = "azure"
+  required = true
+  type = "select"
+}
