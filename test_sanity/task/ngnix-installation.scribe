@@ -5,11 +5,11 @@ resource "task" "ngnix-installation" {
   executeTarget = "resource"
   lastUpdated = "2025-11-20T22:00:33.000Z"
   options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "0fb0c363-6989-4af8-bed8-bc7f8ee4b6a2" }
       optionType = { code = "script" }
-    },
-    { optionType = { code = "shell.sudo" }, value = "on" }
+    }
   ]
   retryable = true
   taskType = { code = "script" }
