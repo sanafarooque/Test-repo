@@ -1,0 +1,13 @@
+resource "instance-type-layout" "419028b8-e9bb-4838-beb0-83f453cf845a" {
+  code = "419028b8-e9bb-4838-beb0-83f453cf845a"
+  name = "custom upcloud layout"
+  uuid = "768c4d1d-c50e-4270-b74a-a397fde37971"
+  description = "custom upcloud layout"
+  hasAutoScale = false
+  instanceType = { code = "customupcloud" }
+  instanceVersion = "1.0"
+  memoryRequirement = 2147483648
+  provisionType = { code = "upcloud" }
+  supportsConvertToManaged = true
+  workloads = [ { code = "upcloud.layout.public.template.ubuntu" } ]
+}

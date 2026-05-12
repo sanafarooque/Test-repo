@@ -1,0 +1,5 @@
+resource "container-type-set" "upcloud.layout.public.template.ubuntu" {
+  code = "upcloud.layout.public.template.ubuntu"
+  uuid = "582ddf9a-d407-442b-a896-88c545fafd41"
+  workloadType = { code = "upcloud.layout.public.template.ubuntu" }
+}
