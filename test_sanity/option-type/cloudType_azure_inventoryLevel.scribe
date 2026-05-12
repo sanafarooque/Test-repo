@@ -1,0 +1,12 @@
+resource "option-type" "cloudType.azure.inventoryLevel" {
+  code = "cloudType.azure.inventoryLevel"
+  name = "inventoryLevel"
+  uuid = "205d96d3-cb0e-45c5-8c61-e5c22dc4bc79"
+  displayOrder = 12
+  fieldCode = "gomorpheus.label.inventoryLevel"
+  fieldLabel = "Inventory Level"
+  fieldName = "inventoryLevel"
+  optionSource = "inventoryLevel"
+  required = true
+  type = "select"
+}
