@@ -1,3 +1,5 @@
+# test script
+
 resource "task" "hello world again" {
   name = "hello world again"
   uuid = "31394f4c-d8fe-4462-b14e-99dbad5566b0"
