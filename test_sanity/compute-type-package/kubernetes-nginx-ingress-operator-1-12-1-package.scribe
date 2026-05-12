@@ -1,0 +1,14 @@
+resource "compute-type-package" "kubernetes-nginx-ingress-operator-1-12-1-package" {
+  code = "kubernetes-nginx-ingress-operator-1-12-1-package"
+  name = "nginx ingress operator 1.12.1 package"
+  category = "kubernetes.ingress"
+  dateCreated = "2025-11-12T21:45:50.000Z"
+  description = "install nnginx ingress controllers"
+  lastUpdated = "2025-11-12T21:45:50.000Z"
+  packageType = "nginx"
+  packageVersion = "1.12.1"
+  providerType = "kubernetes"
+  sortOrder = 30
+  specTemplates = [ { code = "nginx-ingress-1-12-1-controller-resource" } ]
+  type = "ingress"
+}
