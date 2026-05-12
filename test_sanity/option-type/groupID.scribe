@@ -1,0 +1,10 @@
+resource "option-type" "groupID" {
+  code = "groupID"
+  name = "groupID"
+  uuid = "4ce656e3-8218-4da8-b2a4-21628e60b713"
+  defaultValue = "1"
+  fieldContext = "config.customOptions"
+  fieldLabel = "mk"
+  fieldName = "groupID"
+  type = "number"
+}
