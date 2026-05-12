@@ -1,0 +1,8 @@
+resource "compute-type-set" "kube-ubuntu-24-04-ha-master-nutanix-amd64-set" {
+  code = "kube-ubuntu-24-04-ha-master-nutanix-amd64-set"
+  name = "kubernetes master"
+  category = "ubuntu"
+  nameSuffix = "-master"
+  nodeType = "master"
+  workloadType = { code = "kubernetes-ubuntu-ha-master-24-04-nutanix-amd64" }
+}
