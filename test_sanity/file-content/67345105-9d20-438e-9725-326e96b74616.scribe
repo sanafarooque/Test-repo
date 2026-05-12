@@ -1,0 +1,12 @@
+resource "file-content" "67345105-9d20-438e-9725-326e96b74616" {
+  uuid = "67345105-9d20-438e-9725-326e96b74616"
+  content = <<EOFSCRIBE
+#!/bin/bash
+echo Listing remotes...
+remotes=$(morpheus remote list --nocolor)
+echo -n "remotes: $remotes"
+
+EOFSCRIBE
+  dateCreated = "2026-05-06T03:40:33.000Z"
+  lastUpdated = "2026-05-06T17:03:10.000Z"
+}

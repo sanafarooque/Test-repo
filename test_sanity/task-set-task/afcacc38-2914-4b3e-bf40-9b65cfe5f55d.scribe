@@ -1,0 +1,6 @@
+resource "task-set-task" "afcacc38-2914-4b3e-bf40-9b65cfe5f55d" {
+  uuid = "afcacc38-2914-4b3e-bf40-9b65cfe5f55d"
+  task = { name = "Sleep-Task" }
+  taskOrder = 3
+  taskPhase = "shutdown"
+}

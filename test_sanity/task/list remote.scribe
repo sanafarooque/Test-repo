@@ -1,0 +1,16 @@
+resource "task" "list remote" {
+  name = "list remote"
+  uuid = "31a5481a-5f2d-4392-a4d5-27f183e92bb4"
+  dateCreated = "2026-05-06T03:40:33.000Z"
+  executeTarget = "resource"
+  labels = [ "sf" ]
+  lastUpdated = "2026-05-06T03:40:33.000Z"
+  options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
+    {
+      content = { uuid = "67345105-9d20-438e-9725-326e96b74616" }
+      optionType = { code = "script" }
+    }
+  ]
+  taskType = { code = "script" }
+}

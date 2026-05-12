@@ -1,0 +1,5 @@
+resource "task-set-task" "79294f24-fc20-4b95-9bcf-54fdc8c799a8" {
+  uuid = "79294f24-fc20-4b95-9bcf-54fdc8c799a8"
+  task = { name = "list remote" }
+  taskPhase = "startup"
+}
