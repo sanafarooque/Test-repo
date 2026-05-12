@@ -6,11 +6,11 @@ resource "task" "Sleep-Task" {
   labels = [ "mbalunis" ]
   lastUpdated = "2026-03-26T19:46:31.000Z"
   options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "c4298aa4-7e7f-42ba-a2f7-e7f6f2c04ad9" }
       optionType = { code = "script" }
-    },
-    { optionType = { code = "shell.sudo" }, value = "on" }
+    }
   ]
   taskType = { code = "script" }
 }
