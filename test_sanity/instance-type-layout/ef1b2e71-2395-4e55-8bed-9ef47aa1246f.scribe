@@ -1,0 +1,12 @@
+resource "instance-type-layout" "ef1b2e71-2395-4e55-8bed-9ef47aa1246f" {
+  code = "ef1b2e71-2395-4e55-8bed-9ef47aa1246f"
+  name = "Morpheus Registry Server (ubuntu 24.04)"
+  uuid = "ff824670-faf3-4567-93b5-71877250b22e"
+  description = "Creates an image registry server on an HVM Cluster"
+  hasAutoScale = false
+  instanceType = { code = "kvm1" }
+  instanceVersion = "24.04"
+  memoryRequirement = 0
+  provisionType = { code = "kvm" }
+  workloads = [ { code = "e961be79-5374-4683-a163-82d830d0d642" } ]
+}

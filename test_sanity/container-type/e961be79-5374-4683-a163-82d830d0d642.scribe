@@ -1,0 +1,14 @@
+resource "container-type" "e961be79-5374-4683-a163-82d830d0d642" {
+  code = "e961be79-5374-4683-a163-82d830d0d642"
+  name = "Ubuntu 24 Docker Image Server"
+  uuid = "a0599b10-8e0f-4e56-9eb9-9f96cd403017"
+  containerVersion = "24.04"
+  entryPoint = ""
+  logTypeCode = "vm"
+  osType = { code = "ubuntu.24.04.64" }
+  provisionType = { code = "kvm" }
+  serverType = "vm"
+  shortName = "ubuntu-image-server"
+  showServerLogs = true
+  statTypeCode = "vm"
+}
