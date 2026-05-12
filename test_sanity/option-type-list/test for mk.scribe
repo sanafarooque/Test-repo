@@ -1,0 +1,8 @@
+resource "option-type-list" "test for mk" {
+  name = "test for mk"
+  uuid = "6e0fb48d-f54f-4281-8050-bf5de8044b4f"
+  initialDataset = "\"\""
+  requestScript = "\"\""
+  sourceUrl = "http://invalid-url-that-does-not-exist.com"
+  translationScript = "\"\""
+}
