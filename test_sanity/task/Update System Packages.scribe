@@ -6,11 +6,11 @@ resource "task" "Update System Packages" {
   labels = [ "mbalunis" ]
   lastUpdated = "2026-03-26T19:31:43.000Z"
   options = [
+    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "c0297c58-fc7f-4266-a89b-690177c23a7c" }
       optionType = { code = "script" }
-    },
-    { optionType = { code = "shell.sudo" }, value = "on" }
+    }
   ]
   taskType = { code = "script" }
 }
