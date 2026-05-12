@@ -1,0 +1,8 @@
+resource "instance-type" "new-esxi-instance-type-0d8e9" {
+  code = "new-esxi-instance-type-0d8e9"
+  name = "new-esxi-instance-type-0d8e9"
+  uuid = "2d4d2061-98c8-4db0-9504-9177a215c076"
+  category = "cloud"
+  deploymentService = ""
+  environmentPrefix = "NEW-ESXI-INSTANCE-TYPE-0D8E9"
+}
