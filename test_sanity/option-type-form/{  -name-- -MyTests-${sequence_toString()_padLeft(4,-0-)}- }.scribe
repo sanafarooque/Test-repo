@@ -1,0 +1,12 @@
+resource "option-type-form" "{  "name": "MyTests-${sequence.toString().padLeft(4,'0')}" }" {
+  code = "{  \"name\": \"MyTests-$${sequence.toString().padLeft(4,'0')}\" }"
+  name = "test form mk"
+  uuid = "8d699517-c22c-443d-a497-501abc81d85b"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+}
