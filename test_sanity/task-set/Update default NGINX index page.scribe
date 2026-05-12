@@ -1,0 +1,11 @@
+resource "task-set" "Update default NGINX index page" {
+  name = "Update default NGINX index page"
+  uuid = "8cc0a47c-9d69-4d9b-9f20-146b54a450d6"
+  dateCreated = "2026-03-24T17:04:21.000Z"
+  labels = [ "mbalunis" ]
+  lastUpdated = "2026-03-26T20:24:55.000Z"
+  optionTypes = [ { code = "customContent" } ]
+  platform = "linux"
+  taskSetTasks = [ { uuid = "8af8d8ac-8bc8-42c8-9496-0857f76a2e9d" } ]
+  taskSetType = "operation"
+}

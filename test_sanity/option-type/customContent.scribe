@@ -1,0 +1,11 @@
+resource "option-type" "customContent" {
+  code = "customContent"
+  name = "Custom default Index page"
+  uuid = "c70601c5-6a4b-49dc-912a-4f10008a80b5"
+  config = { _retainDefault = "" }
+  fieldContext = "config.customOptions"
+  fieldLabel = "customContent"
+  fieldName = "customContent"
+  labels = [ "mbalunis" ]
+  required = true
+}
