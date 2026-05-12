@@ -1,0 +1,26 @@
+resource "compute-type-package" "kubernetes-calico-3-28-1-package" {
+  code = "kubernetes-calico-3-28-1-package"
+  name = "calico 3.28.1 package"
+  category = "kubernetes.network"
+  dateCreated = "2025-11-12T21:45:51.000Z"
+  description = "install calico 3.28.1 networking"
+  lastUpdated = "2025-11-12T21:45:51.000Z"
+  packageType = "calico"
+  packageVersion = "3.28.1"
+  providerType = "kubernetes"
+  restartDns = true
+  sortOrder = 10
+  specTemplates = [
+    { code = "kubernetes-tigera-calico-3-28-1-calico" },
+    { code = "kubernetes-tigera-calico-3-28-1-calico-part-2" },
+    { code = "kubernetes-tigera-calico-3-28-1-typha" },
+    { code = "kubernetes-tigera-calico-3-28-1-typha-part-2" },
+    { code = "kubernetes-tigera-calico-3-28-1-operator-deploy" },
+    { code = "kubernetes-tigera-calico-3-28-1-csi-driver" },
+    { code = "kubernetes-tigera-calico-3-28-1-operator" },
+    { code = "kubernetes-calico-3-28-1-calicoctl" },
+    { code = "kubernetes-calico-3-28-1-install" },
+    { code = "kubernetes-calico-3-28-1-api-install" }
+  ]
+  type = "network"
+}
