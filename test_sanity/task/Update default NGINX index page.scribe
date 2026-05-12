@@ -6,11 +6,11 @@ resource "task" "Update default NGINX index page" {
   labels = [ "mbalunis" ]
   lastUpdated = "2026-03-26T20:05:10.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "on" },
     {
       content = { uuid = "12e99578-2870-4a0b-9211-b2d4f3eb7bf7" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "on" }
   ]
   taskType = { code = "script" }
 }
