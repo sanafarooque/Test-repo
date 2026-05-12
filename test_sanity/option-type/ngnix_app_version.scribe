@@ -1,0 +1,13 @@
+resource "option-type" "ngnix_app_version" {
+  code = "ngnix_app_version"
+  name = "NGNIX App Version Input"
+  uuid = "030b8ea6-5932-486a-ad6c-779d5441d97e"
+  defaultValue = "1.0"
+  fieldContext = "config.customOptions"
+  fieldLabel = "NGINX Version"
+  fieldName = "ngnix_app_version"
+  optionList = { name = "NGNIX App Name" }
+  optionSource = "list"
+  required = true
+  type = "select"
+}

@@ -1,0 +1,16 @@
+resource "container-type" "423f0acd-4e9d-4477-990c-f18a59a6a1c5" {
+  code = "423f0acd-4e9d-4477-990c-f18a59a6a1c5"
+  name = "ESXI NGINX Node"
+  uuid = "dafff8e7-67ee-4ea5-87ab-1554e3ddd9b7"
+  containerVersion = "1.0"
+  entryPoint = ""
+  labels = [ "nginx-node" ]
+  logTypeCode = "vm"
+  provisionType = { code = "esxi" }
+  repositoryImage = ""
+  serverType = "vm"
+  shortName = "NGINXNode"
+  showServerLogs = true
+  statTypeCode = "vm"
+  virtualImage = { code = "vmware.vsphere.image.morpheus.ubuntu.24.04.20250218.amd64" }
+}

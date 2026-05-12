@@ -1,0 +1,11 @@
+resource "instance-type-layout" "55234c3c-96fb-48f3-8b91-a59f1b3dae16" {
+  code = "55234c3c-96fb-48f3-8b91-a59f1b3dae16"
+  name = "ESXI NGINX App Layout"
+  uuid = "cb74e264-50ed-4bf8-8594-a5562559b24a"
+  hasAutoScale = false
+  instanceType = { code = "esxi-nginx-instance-type" }
+  instanceVersion = "1.0"
+  memoryRequirement = 0
+  provisionType = { code = "esxi" }
+  workloads = [ { code = "423f0acd-4e9d-4477-990c-f18a59a6a1c5" } ]
+}
