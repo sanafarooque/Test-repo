@@ -6,11 +6,11 @@ resource "task" "hello world again" {
   labels = [ "sf" ]
   lastUpdated = "2026-05-04T20:24:01.000Z"
   options = [
-    { optionType = { code = "shell.sudo" }, value = "true" },
     {
       content = { uuid = "0f9b2cdb-1863-47a0-85df-e04b2e75e506" }
       optionType = { code = "script" }
-    }
+    },
+    { optionType = { code = "shell.sudo" }, value = "true" }
   ]
   taskType = { code = "script" }
 }
