@@ -1,0 +1,8 @@
+resource "task-set" "ngnix-installation-workflow" {
+  name = "ngnix-installation-workflow"
+  uuid = "9a9a1968-89d0-4100-b9de-aa049fe3aac3"
+  dateCreated = "2025-11-20T21:42:02.000Z"
+  lastUpdated = "2025-11-20T21:42:02.000Z"
+  platform = "linux"
+  taskSetTasks = [ { uuid = "f5e71513-76c0-4817-8fc3-dcbf0665fc3b" } ]
+}

@@ -1,0 +1,31 @@
+resource "file-content" "0fb0c363-6989-4af8-bed8-bc7f8ee4b6a2" {
+  uuid = "0fb0c363-6989-4af8-bed8-bc7f8ee4b6a2"
+  content = <<EOFSCRIBE
+#!/bin/bash
+set -euo pipefail
+
+echo "===== Starting NGINX installation on Ubuntu 24.04 ====="
+
+# Update system packages
+echo "Updating package list..."
+apt-get update -y
+
+# Install NGINX
+echo "Installing NGINX..."
+DEBIAN_FRONTEND=noninteractive apt-get install -y nginx
+
+# Enable & start NGINX service
+echo "Enabling and starting NGINX..."
+systemctl enable nginx
+systemctl start nginx
+
+# Optional: Customize the default page
+echo "Creating custom index.html..."
+echo "<html><body><h1>NGINX deployed via Morpheus Workflow</h1></body></html>" > /var/www/html/index.html
+
+echo "===== NGINX installation complete ====="
+
+EOFSCRIBE
+  dateCreated = "2025-11-20T21:40:57.000Z"
+  lastUpdated = "2025-11-20T21:40:57.000Z"
+}

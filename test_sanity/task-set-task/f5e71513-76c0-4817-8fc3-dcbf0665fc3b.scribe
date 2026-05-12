@@ -1,0 +1,4 @@
+resource "task-set-task" "f5e71513-76c0-4817-8fc3-dcbf0665fc3b" {
+  uuid = "f5e71513-76c0-4817-8fc3-dcbf0665fc3b"
+  task = { name = "ngnix-installation" }
+}
