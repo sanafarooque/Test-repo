@@ -1,0 +1,12 @@
+resource "compute-type-layout" "docker-upcloud-ubuntu-22.04-single" {
+  code = "docker-upcloud-ubuntu-22.04-single"
+  name = "UpCloud Docker Host"
+  computeServers = [ { code = "docker-upcloud-ubuntu-22.04-set" } ]
+  computeVersion = "22.04"
+  dateCreated = "2026-03-25T17:01:25.000Z"
+  description = "This will provision a single docker host vm in upcloud"
+  lastUpdated = "2026-03-31T01:53:38.000Z"
+  memoryRequirement = 1073741824
+  provisionType = { code = "upcloud" }
+  sortOrder = 5
+}

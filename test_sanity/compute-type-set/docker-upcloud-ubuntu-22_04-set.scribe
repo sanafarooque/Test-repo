@@ -1,0 +1,11 @@
+resource "compute-type-set" "docker-upcloud-ubuntu-22.04-set" {
+  code = "docker-upcloud-ubuntu-22.04-set"
+  name = "docker host"
+  category = "ubuntu"
+  canAddNodes = true
+  dynamicCount = true
+  installContainerRuntime = true
+  installStorageRuntime = true
+  nodeType = "worker"
+  workloadType = { code = "docker-upcloud-ubuntu-22.04" }
+}
