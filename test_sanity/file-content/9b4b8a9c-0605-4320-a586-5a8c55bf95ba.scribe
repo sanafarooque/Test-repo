@@ -1,0 +1,25 @@
+resource "file-content" "9b4b8a9c-0605-4320-a586-5a8c55bf95ba" {
+  uuid = "9b4b8a9c-0605-4320-a586-5a8c55bf95ba"
+  content = <<EOFSCRIBE
+disks=(sdb xvdd xvdb vdb xvdc nvme1n1)
+setup=false
+for disk in ${disks[@]}; do
+  if !($setup) && (lsblk | grep -q "${disk}") && !(lsblk | grep -q "${disk}1"); then
+    setup=true
+    sudo parted /dev/${disk} mklabel gpt
+	sleep 2
+    sudo parted -a opt /dev/${disk} mkpart primary ext4 0% 100%
+	sleep 2
+    sudo mkfs.ext4 -L datapartition /dev/${disk}1
+    sudo mkdir -p /mnt/data
+    #echo "LABEL=datapartition /mnt/data ext4 defaults,nofail 0 2" | sudo tee -a /etc/fstab
+	sleep 2
+    sudo mount -a
+	sleep 2
+    echo "success!" | sudo tee /mnt/data/setup.txt
+  fi
+done
+EOFSCRIBE
+  dateCreated = "2026-05-05T15:51:46.000Z"
+  lastUpdated = "2026-05-05T15:51:46.000Z"
+}

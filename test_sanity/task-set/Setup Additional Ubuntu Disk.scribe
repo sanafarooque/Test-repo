@@ -1,0 +1,8 @@
+resource "task-set" "Setup Additional Ubuntu Disk" {
+  name = "Setup Additional Ubuntu Disk"
+  uuid = "51156174-060d-479b-b48c-be73d576132c"
+  dateCreated = "2026-01-12T18:43:39.000Z"
+  lastUpdated = "2026-05-05T16:06:22.000Z"
+  platform = "linux"
+  taskSetTasks = [ { uuid = "ab03edcb-589f-429c-ad34-0039a5a1c7b4" } ]
+}
