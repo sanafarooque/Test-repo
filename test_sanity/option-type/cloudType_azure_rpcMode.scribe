@@ -1,0 +1,13 @@
+resource "option-type" "cloudType.azure.rpcMode" {
+  code = "cloudType.azure.rpcMode"
+  name = "rpcMode"
+  uuid = "a1f80829-36a2-4b34-8a2c-543a9b1f907b"
+  displayOrder = 10
+  fieldCode = "gomorpheus.label.rpcMode"
+  fieldLabel = "Rpc Mode"
+  fieldName = "rpcMode"
+  optionSource = "azureRPCModes"
+  optionSourceType = "com.hpe.morpheus.azure.dataset"
+  required = true
+  type = "select"
+}
