@@ -16,7 +16,7 @@ install_playwright==0.1.0
 pluggy==1.6.0
 pydantic-core==2.27.2
 pydantic-settings==2.10.1
-python-dotenv==1.1.0
+python-dotenv==1.2.2
 python-hpilo==4.4.3
 pytest==8.4.0
 pytest-check>=2.2.0
