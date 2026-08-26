@@ -1,0 +1,29 @@
+resource "option-type-form" "test_dup_field_a" {
+  code = "test_dup_field_a"
+  name = "dupField"
+  uuid = "274427a9-a2e4-440f-95b1-fb2cf3d19417"
+  config = {
+    enableVar = false
+    form = ""
+    formField = ""
+    formOptions = ""
+    formType = "static"
+  }
+  labels = [ "Dup Field A" ]
+  options = [
+    {
+      code = "521db347-7aa9-4fa6-a591-5f58ae89a6d1"
+      name = "521db347-7aa9-4fa6-a591-5f58ae89a6d1"
+      uuid = "4eb54f88-8b4b-40b3-96d8-5849f932aa5d"
+      config = {
+        addon = ""
+        addonPosition = ""
+        retainDefault = false
+      }
+      fieldContext = "config.customOptions"
+      fieldLabel = "Input 1"
+      fieldName = "dupField"
+      formField = true
+    }
+  ]
+}
