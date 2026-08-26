@@ -1,0 +1,9 @@
+resource "option-type" "dupField2" {
+  code = "dupField2"
+  name = "Test Input A"
+  uuid = "b1a37e9f-4b36-46f8-abd6-2b381f4ee76f"
+  config = { _retainDefault = "" }
+  fieldContext = "config.customOptions"
+  fieldLabel = "test_dup_field_a"
+  fieldName = "dupField2"
+}
