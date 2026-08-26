@@ -1,9 +1,9 @@
 resource "option-type" "dupField3" {
   code = "dupField3"
-  name = "Test Input B1"
-  uuid = "a9e3c59b-8ab5-4577-8399-82621e63516b"
+  name = "Test Input A1"
+  uuid = "4641048a-f3e5-4800-8167-2e1bd99a26ab"
   config = { _retainDefault = "" }
   fieldContext = "config.customOptions"
-  fieldLabel = "test_dup_field_b1"
+  fieldLabel = "test_dup_field_a1"
   fieldName = "dupField3"
 }
