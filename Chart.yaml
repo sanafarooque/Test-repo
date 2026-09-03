@@ -1,0 +1,4 @@
+apiVersion: v2
+name: helm-test-mk1
+description: Basic test blueprint
+version: 0.1.0
